@@ -11,7 +11,8 @@ The following section provides detailed instructions for reproducing the data pr
    - Download the relevant data from the Cancer Imaging Archive website, which offers data downloaders for both Linux and Windows platforms.
    - Save the downloaded data onto your server or local machine. The data should appear as shown in the example below.
 
-![Untitled](assets/Untitled 2.png)
+![Untitled 2](https://github.com/user-attachments/assets/3a05b943-6395-4517-81f0-a79b3ebc5da7)
+
 
 1. **Data Processing**
 
@@ -84,7 +85,8 @@ For debugging individual components, follow the steps below. Here, ECG analysis 
 
     Upon successful initiation, the backend service should display output indicating it is running on various addresses.
 
-    ![AMD%E6%AF%94%E8%B5%9B%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A%20881665fbb011461b9d5a18b565d1ea6b/Untitled%203.png](assets/Untitled 3.png)
+![Untitled 3](https://github.com/user-attachments/assets/49032968-a1d5-4ebe-94db-b397fe473169)
+
 
 3. **Start the Frontend Service:**
    In the frontend directory, start the service using:
@@ -95,14 +97,17 @@ For debugging individual components, follow the steps below. Here, ECG analysis 
 
     If `serve` is not installed, run `npm install serve` first. Upon successful start, the terminal should display the service running at local and network addresses.
 
-    ![AMD%E6%AF%94%E8%B5%9B%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A%20881665fbb011461b9d5a18b565d1ea6b/Untitled%204.png](assets/Untitled 4.png)
+    ![Untitled 4](https://github.com/user-attachments/assets/28c00a0d-c894-4581-a481-ad278a14a3b9)
+
 
 4. **Access the Service in a Browser:**
    Open the specified local address (e.g., [http://localhost:8080](http://localhost:8080/)) in a web browser. Navigate to the ECG Analysis tab, upload an image, and view the returned results.
 
-    ![AMD%E6%AF%94%E8%B5%9B%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A%20881665fbb011461b9d5a18b565d1ea6b/Untitled%205.png](assets/Untitled 5.png)
+    ![Untitled 5](https://github.com/user-attachments/assets/b5233101-a3d9-4827-a6dd-061ea1aa6fcb)
 
-    ![AMD%E6%AF%94%E8%B5%9B%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A%20881665fbb011461b9d5a18b565d1ea6b/Untitled%206.png](assets/Untitled 6.png)
+
+    ![Untitled 6](https://github.com/user-attachments/assets/1d2dc1bf-b895-484f-9ec1-8e4136246172)
+
 
     The steps for debugging X-ray Diagnosis and Breast Tumor Analysis are similar. Ensure you select the appropriate project in the frontend during testing.
 
@@ -117,7 +122,8 @@ For debugging individual components, follow the steps below. Here, ECG analysis 
 
     Upon successful initiation, you should see a confirmation message indicating that all services are running.
 
-    ![AMD%E6%AF%94%E8%B5%9B%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A%20881665fbb011461b9d5a18b565d1ea6b/Untitled%207.png](assets/Untitled 7.png)
+    ![Untitled 7](https://github.com/user-attachments/assets/306942db-159a-4979-8148-1a3904b6891d)
+
 
 2. **Access and Use the Services:**
    Open the web interface and interact with the three diagnostic services (ECG, X-ray, and Breast Tumor Analysis). Each service should be accessible and functional, allowing for simultaneous usage.
