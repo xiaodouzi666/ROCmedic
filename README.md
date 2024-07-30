@@ -1,3 +1,8 @@
+# ROCmedic: 🥰Affordable AI Diagnostics For Everyone❤️
+
+![12276c0f51b07dfa82402d82eb50dee](https://github.com/user-attachments/assets/5246e5d1-5cfb-47fa-871b-6b798aa53cc7)
+
+
 ## Reproduction Instructions
 
 **Introduction:**
