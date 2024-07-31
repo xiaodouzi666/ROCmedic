@@ -107,6 +107,14 @@ For debugging individual components, follow the steps below. Here, ECG analysis 
 
     ![Untitled 4](https://github.com/user-attachments/assets/28c00a0d-c894-4581-a481-ad278a14a3b9)
 
+**OR**, you can simply cd in the Vite-project folder, and run the following command to start the front-end service:
+
+   '''bash
+   npm install --legacy-peer-deps
+   npm run dev
+   '''
+
+**With** the command above, the front-end service will also get online, you can choose the way you want! 😉
 
 4. **Access the Service in a Browser:**
    Open the specified local address (e.g., [http://localhost:8080](http://localhost:8080/)) in a web browser. Navigate to the ECG Analysis tab, upload an image, and view the returned results.
