@@ -8,6 +8,9 @@
 **Introduction:**
 The following section provides detailed instructions for reproducing the data processing workflows used in ROCmedic. This includes steps for handling breast cancer, ECG, and X-ray imaging data, ensuring the data is in a suitable format for model training and fine-tuning.
 
+![architecture](https://github.com/user-attachments/assets/dc369444-6612-4f26-beb0-7d28ece8daae)
+
+
 ### 1.1 Data Processing
 
 **1.1.1 Breast Tumor Data**
