@@ -146,3 +146,6 @@ For debugging individual components, follow the steps below. Here, ECG analysis 
     This command will terminate all active services, ensuring that resources are freed.
 
 By following these steps, users can effectively debug and test the individual components as well as the full system of ROCmedic, ensuring that all functionalities are operating as intended.
+
+### PS: All the checkpoints files(.pt) can be found in Google Drive Link: https://drive.google.com/drive/folders/1FzqcNIGAykXaL-yM5MF45zPhWt5y9Yf2?usp=sharing
+### Dataset need to be downloaded by yourself
