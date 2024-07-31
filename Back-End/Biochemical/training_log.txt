@@ -1,0 +1,69 @@
+[2024-07-30 21:19:22,563] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn is not compatible with ROCM
+[2024-07-30 21:19:24,011] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-07-30 21:19:24,011] [INFO] [runner.py:568:main] cmd = /home/azuki/anaconda3/envs/amdyes/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=16666 --enable_each_rank_log=None finetune_visualglm.py --experiment-name finetune-visualglm-6b --model-parallel-size 1 --mode finetune --train-iters 10000 --resume-dataloader --max_source_length 64 --max_target_length 256 --lora_rank 5 --layer_range 0 14 --pre_seq_len 4 --train-data /home/azuki/Biochemical/data/images/formatted_data.json --valid-data /home/azuki/Biochemical/data/images/formatted_data.json --distributed-backend nccl --lr-decay-style cosine --warmup .02 --checkpoint-activations --save-interval 5000 --eval-interval 1000 --save ./checkpoints --split 1 --eval-iters 1000 --eval-batch-size 2 --zero-stage 1 --lr 0.0002 --batch-size 4 --skip-init --fp16 --use_lora
+[2024-07-30 21:19:25,480] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn is not compatible with ROCM
+[2024-07-30 21:19:26,277] [INFO] [launch.py:139:main] 0 NCCL_IB_DISABLE=0
+[2024-07-30 21:19:26,277] [INFO] [launch.py:139:main] 0 NCCL_DEBUG=info
+[2024-07-30 21:19:26,277] [INFO] [launch.py:139:main] 0 NCCL_NET_GDR_LEVEL=2
+[2024-07-30 21:19:26,277] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-07-30 21:19:26,277] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-07-30 21:19:26,277] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-07-30 21:19:26,277] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-07-30 21:19:26,277] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-07-30 21:19:26,278] [INFO] [launch.py:256:main] process 2676 spawned with command: ['/home/azuki/anaconda3/envs/amdyes/bin/python', '-u', 'finetune_visualglm.py', '--local_rank=0', '--experiment-name', 'finetune-visualglm-6b', '--model-parallel-size', '1', '--mode', 'finetune', '--train-iters', '10000', '--resume-dataloader', '--max_source_length', '64', '--max_target_length', '256', '--lora_rank', '5', '--layer_range', '0', '14', '--pre_seq_len', '4', '--train-data', '/home/azuki/Biochemical/data/images/formatted_data.json', '--valid-data', '/home/azuki/Biochemical/data/images/formatted_data.json', '--distributed-backend', 'nccl', '--lr-decay-style', 'cosine', '--warmup', '.02', '--checkpoint-activations', '--save-interval', '5000', '--eval-interval', '1000', '--save', './checkpoints', '--split', '1', '--eval-iters', '1000', '--eval-batch-size', '2', '--zero-stage', '1', '--lr', '0.0002', '--batch-size', '4', '--skip-init', '--fp16', '--use_lora']
+[2024-07-30 21:19:27,763] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn is not compatible with ROCM
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/cextension.py:34: UserWarning: The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+  warn("The installed version of bitsandbytes was compiled without GPU support. "
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: undefined symbol: cadam32bit_grad_fp32
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: /home/azuki/anaconda3/envs/amdyes did not contain ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] as expected! Searching further paths...
+  warn(msg)
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('uLNa9g6G@10.0.8.53'), PosixPath('http'), PosixPath('//Clash'), PosixPath('7890')}
+  warn(msg)
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('/usr/local/cuda/lib64')}
+  warn(msg)
+CUDA SETUP: WARNING! libcuda.so not found! Do you have a CUDA driver installed? If you are on a cluster, make sure you are on a CUDA machine!
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: No libcudart.so found! Install CUDA or the cudatoolkit package (anaconda)!
+  warn(msg)
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: No GPU detected! Check your CUDA paths. Proceeding to load CPU-only library...
+  warn(msg)
+CUDA SETUP: Loading binary /home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so...
+[2024-07-30 21:19:31,429] [INFO] using world size: 1 and model-parallel size: 1 
+[2024-07-30 21:19:31,429] [INFO] > padded vocab (size: 100) with 28 dummy tokens (new size: 128)
+[2024-07-30 21:19:31,433] [INFO] [RANK 0] > initializing model parallel with size 1
+[2024-07-30 21:19:31,433] [INFO] [RANK 0] You didn't pass in LOCAL_WORLD_SIZE environment variable. We use the guessed LOCAL_WORLD_SIZE=1. If this is wrong, please pass the LOCAL_WORLD_SIZE manually.
+[2024-07-30 21:19:31,433] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-07-30 21:19:31,434] [WARNING] [config_utils.py:69:_process_deprecated_field] Config parameter cpu_offload is deprecated use offload_optimizer instead
+[2024-07-30 21:19:31,434] [INFO] [checkpointing.py:1048:_configure_using_config_file] {'partition_activations': False, 'contiguous_memory_optimization': False, 'cpu_checkpointing': False, 'number_checkpoints': None, 'synchronize_checkpoint_boundary': False, 'profile': False}
+[2024-07-30 21:19:31,436] [INFO] [checkpointing.py:229:model_parallel_cuda_manual_seed] > initializing model parallel cuda seeds on global rank 0, model parallel rank 0, and data parallel rank 0 with model parallel seed: 3952 and data parallel seed: 1234
+[2024-07-30 21:19:31,438] [INFO] [RANK 0] building FineTuneVisualGLMModel model ...
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/torch/nn/init.py:452: UserWarning: Initializing zero-element tensors is a no-op
+  warnings.warn("Initializing zero-element tensors is a no-op")
+[2024-07-30 21:19:39,391] [INFO] [RANK 0] replacing layer 0 attention with lora
+[2024-07-30 21:19:39,751] [INFO] [RANK 0] replacing layer 14 attention with lora
+[2024-07-30 21:19:40,114] [INFO] [RANK 0]  > number of parameters on model parallel rank 0: 7802521088
+[2024-07-30 21:19:40,731] [INFO] [RANK 0] global rank 0 is loading checkpoint /home/azuki/.sat_models/visualglm-6b/1/mp_rank_00_model_states.pt
+[2024-07-30 21:20:02,144] [INFO] [RANK 0] Will continue but found unexpected_keys! Check whether you are loading correct checkpoints: ['transformer.position_embeddings.weight'].
+[2024-07-30 21:20:02,144] [INFO] [RANK 0] > successfully loaded /home/azuki/.sat_models/visualglm-6b/1/mp_rank_00_model_states.pt
+[2024-07-30 21:20:05,432] [INFO] [RANK 0] Try to load tokenizer from Huggingface transformers...
+/home/azuki/anaconda3/envs/amdyes/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Explicitly passing a `revision` is encouraged when loading a model with custom code to ensure no malicious code has been contributed in a newer revision.
+Initialized SPTokenizer with vocab_file: /home/azuki/.cache/huggingface/hub/models--THUDM--chatglm-6b/snapshots/8b7d33596d18c5e83e2da052d05ca4db02e60620/ice_text.model
+Number of text tokens: 130344
+[2024-07-30 21:20:06,732] [INFO] [RANK 0] > Set tokenizer as a THUDM/chatglm-6b tokenizer! Now you can get_tokenizer() everywhere.
