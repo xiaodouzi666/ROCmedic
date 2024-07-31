@@ -1,0 +1,1 @@
+import{_ as n,r as e,o as _,c,w as a,a as s}from"./index-1c4369de.js";const r={};function l(m,p){const o=e("Image"),t=e("Layout");return _(),c(t,null,{left:a(()=>[s(o)]),_:1})}const d=n(r,[["render",l]]);export{d as default};
