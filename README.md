@@ -109,10 +109,11 @@ For debugging individual components, follow the steps below. Here, ECG analysis 
 
 **OR**, you can simply cd in the Vite-project folder, and run the following command to start the front-end service:
 
-   '''bash
+   ```bash
    npm install --legacy-peer-deps
    npm run dev
-   '''
+   ```
+
 
 **With** the command above, the front-end service will also get online, you can choose the way you want! 😉
 
