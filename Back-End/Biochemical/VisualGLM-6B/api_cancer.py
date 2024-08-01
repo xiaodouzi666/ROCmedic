@@ -4,7 +4,7 @@ import os
 import subprocess
 
 app = Flask(__name__)
-CORS(app)  # 允许所有来源的跨域请求
+CORS(app)  # Allow cross-origin requests from all sources
 
 UPLOAD_FOLDER = '/home/azuki/Biochemical/VisualGLM-6B/upload_images'
 PRETRAINED_MODEL_PATH = '/home/azuki/Biochemical/VisualGLM-6B/checkpoints/finetune-visualglm-6b-07-26-22-31'
@@ -20,12 +20,12 @@ def upload_file():
     if file:
         filename = os.path.join(UPLOAD_FOLDER, file.filename)
         file.save(filename)
-        # 调用诊断接口
+        # Call the diagnostic interface
         diagnosis_result = get_diagnosis(filename)
         if 'error' in diagnosis_result:
             return jsonify(diagnosis_result)
 
-        # 调用建议接口
+        # Call the suggestion interface
         suggestion_result = get_suggestion(diagnosis_result['diagnosis_result'])
         if 'error' in suggestion_result:
             return jsonify(suggestion_result)
@@ -78,7 +78,7 @@ def suggestion():
 def get_suggestion(diagnosis_result):
     command = f'python cli_cancer.py --image_path "" --english'
     query = f'{diagnosis_result}\nPlease provide detailed judgment basis and directly answer what can be diagnosed with this breast tumor Xray image, and disease suggestion based on your diagnosis results. Please strictly follow the following format:\n\nJudgment basis:\n1. Please list the first basis\n2. Please list the second basis\n\nDisease suggestion:\n1. Please list the first suggestion\n2. Please list the second suggestion\n\nPlease make sure each basis and suggestion is on a separate line and listed according to the number.'
-    print(f"Query sent to model: {query}")  # 调试输出
+    print(f"Query sent to model: {query}")
     result = subprocess.run(command, input=query, shell=True, capture_output=True, text=True)
     print(f"Subprocess output: {result.stdout}")
     print(f"Subprocess error: {result.stderr}")

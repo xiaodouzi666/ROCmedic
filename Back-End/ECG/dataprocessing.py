@@ -1,10 +1,10 @@
 import os
 import json
 
-# 设置数据文件夹路径
+# Set the data folder path
 data_folder = '/home/azuki/ECG/data'
 
-# 定义心电图标签
+# Define ECG Labels
 categories = {
     "ECG Images of Myocardial Infarction Patients": "Myocardial Infarction detected.",
     "ECG Images of Patient that have abnormal heartbeat": "Abnormal heartbeat detected.",
@@ -12,13 +12,13 @@ categories = {
     "Normal Person ECG Images": "This ECG is normal and there are no abnormal symptoms."
 }
 
-# 定义统一的提示词
+# Definition prompt word
 prompt = "Is there anything abnormal on this ECG?"
 
-# 初始化结果列表
+# Initialize the result list
 results = []
 
-# 遍历每个类别文件夹
+# Loop through each category folder
 for category, label in categories.items():
     category_path = os.path.join(data_folder, category)
     if os.path.isdir(category_path):
@@ -33,9 +33,9 @@ for category, label in categories.items():
                 }
                 results.append(result)
 
-# 生成JSON文件
+# Generate JSON file
 output_file = 'ecg_data.json'
 with open(output_file, 'w') as f:
     json.dump(results, f, indent=4)
 
-print(f"JSON文件已生成: {output_file}")
+print(f"JSON file generated: {output_file}")

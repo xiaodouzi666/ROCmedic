@@ -17,7 +17,7 @@ def convert_json(input_path, output_path):
     with open(output_path, 'w', encoding='utf-8') as outfile:
         json.dump(converted_data, outfile, indent=4)
 
-# 输入和输出文件路径
+# Input and output file paths
 input_path = "/home/azuki/Biochemical/data/images/formatted_data.json"
 output_path = "/home/azuki/Biochemical/data/images/converted_data.json"
 

@@ -55,19 +55,19 @@ def extract_metadata_from_dicom(dicom_folder, metadata_df):
     
     return extracted_data
 
-# 示例路径
+
 dicom_folder = '/home/azuki/NFS/manifest-1713182663002/Advanced-MRI-Breast-Lesions'
 metadata_path = '/home/azuki/Biochemical/Advanced-MRI-Breast-Lesions-DA-Clinical-Jan112024.xlsx'
 
-# 使用第二行作为列名读取 Excel 文件
+# Read Excel file using second row as column names
 metadata_df = pd.read_excel(metadata_path, header=1)
 
-# 查看数据框架中的列名
+# View column names in a dataframe
 print(metadata_df.columns)
 
-# 提取 DICOM 元数据
+# Extract DICOM metadata
 extracted_data = extract_metadata_from_dicom(dicom_folder, metadata_df)
 
-# 保存到JSON文件
+
 with open('extracted_data.json', 'w') as f:
     json.dump(extracted_data, f, indent=4)

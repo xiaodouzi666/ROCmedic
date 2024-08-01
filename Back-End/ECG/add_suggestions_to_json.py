@@ -1,7 +1,7 @@
 import json
 import os
 
-# 定义诊断意见，根据不同的类型
+# Define diagnostic opinions, according to different types
 diagnosis_suggestions = {
     "Myocardial Infarction detected.": [
         "Medications such as antiplatelets and thrombolytics may be required.",
@@ -42,10 +42,10 @@ diagnosis_suggestions = {
         "Nitroglycerin to widen coronary vessels\n"
         "Drugs to decrease the heart's workload and pain, relieve anxiety, or regulate heart rhythm"
     ],
-    # 这里可以增加更多类型的诊断意见
+    
 }
 
-# 定义文件路径
+# Define the file path
 json_file_path = '/home/azuki/ECG/data/ecg_data.json'
 
 def update_json_with_diagnosis_suggestions(file_path):
